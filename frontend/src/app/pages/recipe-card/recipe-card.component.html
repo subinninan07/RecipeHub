@@ -1,0 +1,146 @@
+<!-- <mat-card class="example-card">
+  <mat-card-header>
+    <img
+      mat-card-avatar
+      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+      class="object-cover object-top"
+    />
+    <mat-card-title>{{ recipe.title }}</mat-card-title>
+    <mat-card-subtitle>
+     Created by: {{recipe.user.fullName}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img
+    class="h-[22rem] object-cover"
+    mat-card-image
+    [src]="recipe.image"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <p class="pt-3"> <strong>Ingredients:</strong> {{recipe.ingredients}}</p>
+    <p > <strong>Instructions:</strong>
+      {{recipe.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="flex justify-between">
+    <div>
+      <button class="like">{{ recipe.likes.length }}</button>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Example icon button with a heart icon"
+        (click)="handleRecipeLike(recipe.id)"
+      >
+      
+      
+      @if(recipe.likes?.includes(user.id)){
+        <mat-icon>favorite</mat-icon>
+      }
+      @else{
+        <mat-icon>favorite_border</mat-icon>
+      }
+        
+      </button>
+
+      <button
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a heart icon"
+        (click)="openUpdateRecipeModel()"
+      >
+        <mat-icon >edit</mat-icon>
+      </button>
+      <button
+        (click)="openDialog()"
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a heart icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a heart icon"
+        (click)="deleteRecipe(recipe.id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card> -->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <img
+      mat-card-avatar
+      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+      class="object-cover object-top"
+    />
+    <mat-card-title>{{ recipe.title }}</mat-card-title>
+    <mat-card-subtitle>
+     Created by: {{recipe.user.fullName}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img
+    class="h-[22rem] object-cover"
+    mat-card-image
+    [src]="recipe.image"
+    alt="Photo of a Shiba Inu"
+  />
+
+  <mat-card-content>
+    <p class="pt-3"> <strong>Food Type:</strong> {{recipe.vegornonveg}}</p>
+    
+  </mat-card-content>
+  
+
+  <mat-card-content>
+    <p class="pt-3"> <strong>Ingredients:</strong> {{recipe.ingredients}}</p>
+    <p> <strong>Instructions:</strong>
+      {{recipe.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="flex justify-between">
+    <div class="flex items-center"> <!-- Added container with flexbox -->
+      <button class="like">{{ recipe.likes.length }}</button>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Example icon button with a heart icon"
+        (click)="handleRecipeLike(recipe.id)"
+      >
+        <mat-icon>{{ recipe.likes?.includes(user.id) ? 'favorite' : 'favorite_border' }}</mat-icon>
+      </button>
+
+      <button
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a heart icon"
+        (click)="openUpdateRecipeModel()"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        (click)="openDialog()"
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a heart icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a heart icon"
+        (click)="deleteRecipe(recipe.id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

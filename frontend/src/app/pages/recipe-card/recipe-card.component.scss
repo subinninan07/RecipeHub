@@ -1,0 +1,15 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  // .like{
+  //   color: #c2185b;
+  //   padding-bottom: 10px;
+    
+  // }
+
+  .like {
+    color: #c2185b;
+    margin-top: 1px; /* Adjust margin to lower the position of the number */
+    margin-right: 0px; /* Adjust margin to separate like button and heart icon */
+}
